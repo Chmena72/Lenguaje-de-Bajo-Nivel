@@ -22,9 +22,9 @@ Este proyecto implementa un simulador educativo de CPU capaz de ejecutar program
 - **R1, R2**: Registros de propósito general
 
 #### Sistema de Memoria
--Memoria RAM simulada como arreglo configurable
--Almacenamiento compartido de instrucciones y datos (arquitectura Von Neumann)
--Inicialización automática en ceros
+- Memoria RAM simulada como arreglo configurable
+- Almacenamiento compartido de instrucciones y datos (arquitectura Von Neumann)
+- Inicialización automática en ceros
 
 #### Unidades Funcionales
 - **Unidad de Control (UC)**: Coordina el ciclo de instrucción
@@ -51,11 +51,11 @@ Este proyecto implementa un simulador educativo de CPU capaz de ejecutar program
 
 ## Objetivos Educativos
 Este simulador permite:
--Comprender el funcionamiento interno de los procesadores
--Visualizar el ciclo de instrucción en tiempo real
--Analizar el impacto de diferentes modos de direccionamiento
--Conectar teoría y práctica de arquitectura de computadoras
--Aprender programación en lenguaje ensamblador
+- Comprender el funcionamiento interno de los procesadores
+- Visualizar el ciclo de instrucción en tiempo real
+- Analizar el impacto de diferentes modos de direccionamiento
+- Conectar teoría y práctica de arquitectura de computadoras
+- Aprender programación en lenguaje ensamblador
 
 ## Autores
 - **ALAN  JESÚS  TRUJILLO  CAMARILLO**
@@ -64,4 +64,5 @@ Este simulador permite:
 - **ALEXANDER  LÓPEZ  HERNÁNDEZ**
 - **ANGEL  YAEL  TELLEZ  ORTIZ**
 ## Licencia
+
 Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
