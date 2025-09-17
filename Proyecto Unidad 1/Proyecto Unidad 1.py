@@ -17,7 +17,6 @@ class SimuladorEnsamblador:
         self.ejecutando = False
     
     def cargar_programa(self, instrucciones):
-        """Carga un programa en memoria"""
         self.programa = instrucciones
     
     #Modos de direccionamiento
@@ -50,14 +49,6 @@ class SimuladorEnsamblador:
                 return self.memoria[base + self.r2]
             else:
                 raise Exception(f"Registro {reg} no soportado en indexado")
-
-        # Registro directo
-        elif op == "ACC":
-            return self.acc
-        elif op == "R1":
-            return self.r1
-        elif op == "R2":
-            return self.r2
 
         # Directo (n)
         else:
@@ -170,7 +161,6 @@ class SimuladorEnsamblador:
 
 # Ejemplo de uso
 def suma_simple():
-    """Crea un programa de ejemplo que suma 5 + 3 y almacena el resultado"""
     programa = [
     ["CARGA", "#5"],        # Inmediato → ACC = 5
     ["ALMACENA", "10"],     # Directo → MEM[10] = 5
@@ -183,7 +173,6 @@ def suma_simple():
     return programa
 
 def suma_con_salto():
-    """Crea un programa de ejemplo que suma 2 números con salto condicional"""
     programa = [
         ["CARGA", "#0"],        # ACC = 0
         ["ALMACENA", "20"],     # MEM[20] = 0 (acumulador)
@@ -201,7 +190,6 @@ def suma_con_salto():
     return programa
 
 def resta():
-    """Crea un programa de ejemplo que resta 10 - 4 y almacena el resultado"""
     programa = [
         ["CARGA", "#10"],       # ACC = 10
         ["ALMACENA", "30"],     # MEM[30] = 10
@@ -216,7 +204,6 @@ def resta():
     return programa
 
 def direccionamiento_indirecto():
-    """Crea un programa de ejemplo que usa direccionamiento indirecto"""
     programa = [
         ["CARGA", "#7"],        # ACC = 7
         ["ALMACENA", "40"],     # MEM[40] = 7
@@ -228,7 +215,6 @@ def direccionamiento_indirecto():
     return programa
 
 def direccionamiento_relativo():
-    """Crea un programa de ejemplo que usa direccionamiento relativo"""
     programa = [
         ["CARGA", "#10"],       # ACC = 10
         ["ALMACENA", "50"],     # MEM[50] = 10
@@ -242,7 +228,6 @@ def direccionamiento_relativo():
     return programa
 
 def direccionamiento_indexado():
-    """Crea un programa de ejemplo que usa direccionamiento indexado"""
     programa = [
         ["CARGA", "#3"],        # ACC = 3
         ["ALMACENA", "60"],     # MEM[60] = 3
@@ -256,7 +241,6 @@ def direccionamiento_indexado():
     return programa
 
 def programa_completo():
-    """Crea un programa de ejemplo que usa varias instrucciones y modos"""
     programa = [
         ["CARGA", "#4"],        # ACC = 4
         ["ALMACENA", "70"],     # MEM[70] = 4
@@ -272,7 +256,6 @@ def programa_completo():
     return programa
 
 def error_programa():
-    """Crea un programa de ejemplo que contiene un error (instrucción desconocida)"""
     programa = [
         ["CARGA", "#5"],        # ACC = 5
         ["ALMACENA", "80"],     # MEM[80] = 5
@@ -327,4 +310,5 @@ if __name__ == "__main__":
     print("\nPrograma con error")
     simulador = SimuladorEnsamblador()
     simulador.cargar_programa(error_programa())
+
     simulador.ejecutar()
